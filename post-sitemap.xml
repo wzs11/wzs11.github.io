@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://www.huweihuang.com/article/git/</loc>
+        <lastmod>2020-03-29T13:23:48.648Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.huweihuang.com/article/vue-router/</loc>
         <lastmod>2020-03-20T07:48:04.589Z</lastmod>
         <changefreq>weekly</changefreq>

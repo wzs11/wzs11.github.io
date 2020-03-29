@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          wzs | Blog
+          git - wzs | Blog
         
     </title>
 
-    <link rel="canonical" href="http://www.huweihuang.com/archives/2020/03/">
+    <link rel="canonical" href="http://www.huweihuang.com/article/git/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -71,8 +71,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/img/header_img/archives-widget.jpg')
-            /*page*/
+            background-image: url('/img/article_header/article_bg.jpg')
+            /*post*/
         
     }
     
@@ -85,10 +85,18 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>wzs</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">个人博客</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#git" title="git">git</a>
+                            
+                        </div>
+                        <h1>git</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by wzs on
+                            2020-03-29
+                        </span>
                     </div>
                 
 
@@ -191,299 +199,232 @@
 
 
     <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
-        
+    <!-- Modify by Yu-Hsuan Yen -->
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 archive">
-            <!-- 归档列表 -->
-            
-            
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
 
-             <!-- 归档列表 -->
+                <h3><span id="git操作">Git操作</span></h3>
+<h4><span id="当你安装好git以后需要进行一个配置">当你安装好git以后需要进行一个配置</span></h4>
+<ul>
+<li>git config --global <a href="http://user.name" target="_blank" rel="noopener">user.name</a> “wzs”   配置用户名</li>
+<li>git config --global user.email <a href="mailto:%22xxxxxxxxx@qq.com" target="_blank" rel="noopener">&quot;xxxxxxxxx@qq.com</a>&quot;  配置邮箱</li>
+<li>cat ~/.gitconfig  可以查看git的配置</li>
+</ul>
+<h4><span id="创建本地仓库">创建本地仓库</span></h4>
+<ul>
+<li>git init 初始化一个git仓库  初始化之后会默认有一个master分支</li>
+<li>git status 查看仓库的状态</li>
+<li>git add 文件名     可以将文件提交到暂存区</li>
+<li>git add -A      将当前文件都加到版本控制中   git add all无论在哪个目录执行都会提交相应文件。</li>
+<li>git add .只能够提交当前目录或者它后代目录下相应文件。</li>
+<li>git rm --cached 文件名     恢复到之前的状态</li>
+<li>git commit -m “本次提交的信息”</li>
+<li>git push 提交</li>
+</ul>
+<h4><span id="链接远程仓库">链接远程仓库</span></h4>
+<ul>
+<li>git remote add origin <a href="https://github.com/yourName/repositoryname.git" target="_blank" rel="noopener">https://github.com/yourName/repositoryname.git</a>   后面这个是远程仓库的路径</li>
+<li>git push origin 分支名  在远程仓库创建一个分支</li>
+<li>git push origin 本地分支名:远程分支名   在远程创建一个分支名和本地名不一样，但是有联系的分支</li>
+</ul>
+<h4><span id="在本地删除远程分支">在本地删除远程分支</span></h4>
+<ul>
+<li>git push origin :分支名</li>
+</ul>
+<h4><span id="拷贝远程仓库">拷贝远程仓库</span></h4>
+<ul>
+<li>git clone   地址   克隆远程代码</li>
+<li>git pull  更新本地代码</li>
+<li>git pull  origin master   更新远程代码的的分支</li>
+</ul>
+<h4><span id="git分支">git分支</span></h4>
+<ul>
+<li>git branch 分支名    创建新的分支</li>
+<li>git chackout -b 分支名    创建并跳转分支</li>
+<li>git branch -d 分支名    删除分支</li>
+<li>git branch -D 分支名  强制删除分支</li>
+<li>合并分支(在主分支上) git merge 分支名</li>
+</ul>
+<p>-git log --oneline  查看git日志</p>
 
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-                    <span class="tag-text">2020</span>
-                </span>
-                <ul>
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    03-29
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/article/git/" style="color: #0085a1">
-                        <span>
-                            git
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    03-20
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/article/vue-router/" style="color: #0085a1">
-                        <span>
-                            vue-router
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    03-19
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/article/lifeCycle/" style="color: #0085a1">
-                        <span>
-                            Vue中的生命周期
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    03-18
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/article/problem/" style="color: #0085a1">
-                        <span>
-                            按需引入element-ui
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/article/vue-router/" data-toggle="tooltip" data-placement="top" title="vue-router">Next Post &rarr;</a>
+                        </li>
+                    
                 </ul>
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2017">
-                    <span class="tag-text">2017</span>
-                </span>
-                <ul>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    09-18
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/article/hexo-theme-huweihuang/" style="color: #0085a1">
-                        <span>
-                            [Hexo] Theme HuWeihuang
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                </ul>
-            </div>
-            
-
-
-        </div>
-    </div>
-</div>
-
-<style type="text/css">
-
-   @media (min-width: 992px) {
-   .archive {
-       margin-left: 8.33333333%;
-       padding-right: 26.333333%;
-   }
-}
-</style>
-
-<style type="text/css">
-   @media (min-width: 1200px){
-   .archive {
-   margin-left: 16.66666667%;
-   padding-right: 16.666667%;
-   }
-}
-</style>
-
 
                 <br>
 
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
                 <!-- require APlayer -->
                 
 
-                <!-- 如果开启评论功能 -->
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    <style>
+      span.toc-nav-number{
+        display: none
+      }
+    </style>
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"><span id="git&#x64CD;&#x4F5C;">Git&#x64CD;&#x4F5C;</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text"><span id="&#x5F53;&#x4F60;&#x5B89;&#x88C5;&#x597D;git&#x4EE5;&#x540E;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;">&#x5F53;&#x4F60;&#x5B89;&#x88C5;&#x597D;git&#x4EE5;&#x540E;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text"><span id="&#x521B;&#x5EFA;&#x672C;&#x5730;&#x4ED3;&#x5E93;">&#x521B;&#x5EFA;&#x672C;&#x5730;&#x4ED3;&#x5E93;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text"><span id="&#x94FE;&#x63A5;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;">&#x94FE;&#x63A5;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text"><span id="&#x5728;&#x672C;&#x5730;&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;">&#x5728;&#x672C;&#x5730;&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x5206;&#x652F;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text"><span id="&#x62F7;&#x8D1D;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;">&#x62F7;&#x8D1D;&#x8FDC;&#x7A0B;&#x4ED3;&#x5E93;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text"><span id="git&#x5206;&#x652F;">git&#x5206;&#x652F;</span></span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#git" title="git">git</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://blog.csdn.net/huwh_" target="_blank">CSDN Blog wzs</a></li>
+                    
+                        <li><a href="http://dockone.io/people/wzs" target="_blank">DockOne wzs</a></li>
+                    
+                        <li><a href="https://yq.aliyun.com/u/huweihuang" target="_blank">阿里云栖社区 wzs</a></li>
+                    
+                </ul>
                 
             </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/#git" title="git" rel="1">git</a>
-            
-        
-            
-            <a href="/tags/#Hexo" title="Hexo" rel="1">Hexo</a>
-            
-        
-            
-            <a href="/tags/#VUE" title="VUE" rel="2">VUE</a>
-            
-        
-            
-            <a href="/tags/#常见问题" title="常见问题" rel="1">常见问题</a>
-            
-        
+        </div>
     </div>
-</section>
+</article>
 
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT ME</a></h5>
-    <div class="short-about">
 
-        
-            <img id = "avatar_pic" src="/img/avatar/ironman.png" />
-        
 
-        
-            <p>Stay hungry,Stay foolish</p>
-        
 
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
 
-            
 
-            
 
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/huweihuang">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
 
-        <hr>
-    
-        
-  <h5>RECENT POSTS</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/article/git/">git</a>
-        </li>
-      
-        <li>
-          <a href="/article/vue-router/">vue-router</a>
-        </li>
-      
-        <li>
-          <a href="/article/lifeCycle/">Vue中的生命周期</a>
-        </li>
-      
-        <li>
-          <a href="/article/problem/">按需引入element-ui</a>
-        </li>
-      
-        <li>
-          <a href="/article/hexo-theme-huweihuang/">[Hexo] Theme HuWeihuang</a>
-        </li>
-      
-    </ul>
-  </div>
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
 
-        <hr>
-    
-        <!-- Friends Blog -->
 
-<h5>FRIENDS</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="http://blog.csdn.net/huwh_" target="_blank">CSDN Blog wzs</a></li>
-    
-        <li><a href="http://dockone.io/people/wzs" target="_blank">DockOne wzs</a></li>
-    
-        <li><a href="https://yq.aliyun.com/u/huweihuang" target="_blank">阿里云栖社区 wzs</a></li>
-    
-</ul>
-
-        <hr>
-    
-        
-    <h5>ARCHIVES</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-
-        <hr>
-    
-</div>
-
-        
-    </div>
-</div>
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<script>
+        $('#toc').on('click','a',function(a){
+            // var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            // console.log(window.navigator.userAgent,isChrome)
+                // if(isChrome) {
+                    // console.log(a.currentTarget.outerHTML);
+                    // console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    // document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                // }
+        })  
+</script>
 
 
     <!-- Footer -->
